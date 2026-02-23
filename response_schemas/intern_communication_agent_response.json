@@ -1,0 +1,64 @@
+{
+  "agent_name": "Intern Communication Agent",
+  "agent_id": "699c3be7f596b4aad7bce3b3",
+  "description": "Receives and processes inbound WhatsApp messages from interns, extracts structured data (progress%, blockers, attendance), updates dashboard metrics, and sends confirmations back to interns.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "intern_name": "string",
+    "message_type": "string",
+    "extracted_data": {
+      "task_id": "string",
+      "task_title": "string",
+      "progress_percentage": "number",
+      "blockers": [
+        "string"
+      ],
+      "attendance_status": "string",
+      "daily_summary": "string"
+    },
+    "confirmation_message": "string",
+    "dashboard_updates": {
+      "update_type": "string",
+      "intern_name": "string",
+      "task_progress": "number",
+      "new_status": "string",
+      "blockers_flagged": "boolean",
+      "attendance_marked": "boolean"
+    },
+    "activity_log_entry": {
+      "action": "string",
+      "details": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "intern_name": "sample string",
+    "message_type": "Type of intern message: progress_update, attendance, query, blocker_report, daily_checkin",
+    "extracted_data": {
+      "task_id": "sample string",
+      "task_title": "sample string",
+      "progress_percentage": 0,
+      "blockers": [
+        "sample string"
+      ],
+      "attendance_status": "sample string",
+      "daily_summary": "sample string"
+    },
+    "confirmation_message": "Reply message to send back to the intern via WhatsApp",
+    "dashboard_updates": {
+      "update_type": "sample string",
+      "intern_name": "sample string",
+      "task_progress": 0,
+      "new_status": "sample string",
+      "blockers_flagged": false,
+      "attendance_marked": false
+    },
+    "activity_log_entry": {
+      "action": "sample string",
+      "details": "sample string",
+      "timestamp": "sample string"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "agent_name": "Task & Dashboard Manager Agent",
+  "agent_id": "699c3be7ca4c7a6958c97fe0",
+  "description": "Processes Amit's commands to assign tasks, update intern records, send reminders, and structure outgoing WhatsApp messages to interns. Manages all dashboard data operations.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "action": "string",
+    "task_details": {
+      "task_id": "string",
+      "title": "string",
+      "description": "string",
+      "assigned_to": "string",
+      "deadline": "string",
+      "priority": "string",
+      "status": "string",
+      "progress": "number"
+    },
+    "message_to_intern": "string",
+    "dashboard_update": {
+      "active_interns": "number",
+      "pending_tasks": "number",
+      "attendance_rate": "number",
+      "overdue_items": "number",
+      "recent_activity": [
+        {
+          "intern_name": "string",
+          "action": "string",
+          "timestamp": "string",
+          "details": "string"
+        }
+      ]
+    },
+    "status_message": "string"
+  },
+  "example_response": {
+    "action": "assign_task",
+    "task_details": {
+      "task_id": "TASK-001",
+      "title": "Complete API Integration",
+      "description": "Integrate the payment gateway API with the checkout module",
+      "assigned_to": "Ravi Kumar",
+      "deadline": "2026-03-01",
+      "priority": "high",
+      "status": "To Do",
+      "progress": 0
+    },
+    "message_to_intern": "Hi Ravi! You have been assigned a new task: Complete API Integration. Details: Integrate the payment gateway API with the checkout module. Deadline: March 1, 2026. Priority: High. Please acknowledge receipt of this task.",
+    "dashboard_update": {
+      "active_interns": 5,
+      "pending_tasks": 12,
+      "attendance_rate": 92,
+      "overdue_items": 2,
+      "recent_activity": [
+        {
+          "intern_name": "Ravi Kumar",
+          "action": "task_assigned",
+          "timestamp": "2026-02-23T10:00:00Z",
+          "details": "New task assigned: Complete API Integration"
+        }
+      ]
+    },
+    "status_message": "Task TASK-001 successfully assigned to Ravi Kumar"
+  }
+}

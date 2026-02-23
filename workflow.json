@@ -1,0 +1,44 @@
+{
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "Manager Command / Intern Message",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "task_dashboard_agent",
+      "type": "Agent",
+      "label": "Task & Dashboard Manager Agent",
+      "nodeCategory": "agent",
+      "agent_id": "699c3be7ca4c7a6958c97fe0"
+    },
+    {
+      "id": "intern_comm_agent",
+      "type": "Agent",
+      "label": "Intern Communication Agent",
+      "nodeCategory": "agent",
+      "agent_id": "699c3be7f596b4aad7bce3b3"
+    },
+    {
+      "id": "output_node",
+      "type": "Output",
+      "label": "Response Output",
+      "nodeCategory": "end"
+    }
+  ],
+  "edges": [
+    {
+      "source": "input_node",
+      "target": "task_dashboard_agent"
+    },
+    {
+      "source": "task_dashboard_agent",
+      "target": "intern_comm_agent"
+    },
+    {
+      "source": "intern_comm_agent",
+      "target": "output_node"
+    }
+  ]
+}

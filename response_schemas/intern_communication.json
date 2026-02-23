@@ -1,0 +1,60 @@
+{
+  "agent_name": "Intern Communication Agent",
+  "agent_id": "699c3be7f596b4aad7bce3b3",
+  "description": "Receives and processes inbound WhatsApp messages from interns, extracts structured data (progress%, blockers, attendance), updates dashboard metrics, and sends confirmations back to interns.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "intern_name": "string",
+    "message_type": "string",
+    "extracted_data": {
+      "task_id": "string",
+      "task_title": "string",
+      "progress_percentage": "number",
+      "blockers": ["string"],
+      "attendance_status": "string",
+      "daily_summary": "string"
+    },
+    "confirmation_message": "string",
+    "dashboard_updates": {
+      "update_type": "string",
+      "intern_name": "string",
+      "task_progress": "number",
+      "new_status": "string",
+      "blockers_flagged": "boolean",
+      "attendance_marked": "boolean"
+    },
+    "activity_log_entry": {
+      "action": "string",
+      "details": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "intern_name": "Priya Sharma",
+    "message_type": "progress_update",
+    "extracted_data": {
+      "task_id": "TASK-003",
+      "task_title": "Design Landing Page",
+      "progress_percentage": 75,
+      "blockers": ["Waiting for brand guidelines from marketing team"],
+      "attendance_status": "present",
+      "daily_summary": "Completed header and footer sections. Working on hero section. Blocked on color scheme pending brand guidelines."
+    },
+    "confirmation_message": "Thanks Priya! Your progress on Design Landing Page has been updated to 75%. I have noted the blocker regarding brand guidelines - this will be flagged to Amit for follow-up. Keep up the great work!",
+    "dashboard_updates": {
+      "update_type": "progress_update",
+      "intern_name": "Priya Sharma",
+      "task_progress": 75,
+      "new_status": "In Progress",
+      "blockers_flagged": true,
+      "attendance_marked": true
+    },
+    "activity_log_entry": {
+      "action": "progress_update_received",
+      "details": "Priya Sharma updated TASK-003 (Design Landing Page) to 75%. Blocker flagged: Waiting for brand guidelines.",
+      "timestamp": "2026-02-23T14:30:00Z"
+    }
+  }
+}

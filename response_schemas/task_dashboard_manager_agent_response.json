@@ -1,0 +1,66 @@
+{
+  "agent_name": "Task & Dashboard Manager Agent",
+  "agent_id": "699c3be7ca4c7a6958c97fe0",
+  "description": "Processes Amit's commands to assign tasks, update intern records, send reminders, and structure outgoing WhatsApp messages to interns. Manages all dashboard data operations.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "action": "string",
+    "task_details": {
+      "task_id": "string",
+      "title": "string",
+      "description": "string",
+      "assigned_to": "string",
+      "deadline": "string",
+      "priority": "string",
+      "status": "string",
+      "progress": "number"
+    },
+    "message_to_intern": "string",
+    "dashboard_update": {
+      "active_interns": "number",
+      "pending_tasks": "number",
+      "attendance_rate": "number",
+      "overdue_items": "number",
+      "recent_activity": [
+        {
+          "intern_name": "string",
+          "action": "string",
+          "timestamp": "string",
+          "details": "string"
+        }
+      ]
+    },
+    "status_message": "string"
+  },
+  "example_response": {
+    "action": "The action performed: assign_task, update_task, send_reminder, update_status, get_dashboard_data",
+    "task_details": {
+      "task_id": "sample string",
+      "title": "sample string",
+      "description": "sample string",
+      "assigned_to": "sample string",
+      "deadline": "sample string",
+      "priority": "sample string",
+      "status": "sample string",
+      "progress": 0
+    },
+    "message_to_intern": "The formatted WhatsApp message to send to the intern",
+    "dashboard_update": {
+      "active_interns": 0,
+      "pending_tasks": 0,
+      "attendance_rate": 0,
+      "overdue_items": 0,
+      "recent_activity": [
+        {
+          "intern_name": "sample string",
+          "action": "sample string",
+          "timestamp": "sample string",
+          "details": "sample string"
+        }
+      ]
+    },
+    "status_message": "sample string"
+  }
+}

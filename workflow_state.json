@@ -1,0 +1,35 @@
+{
+  "agents": [
+    {
+      "agent_id": "699c3be7ca4c7a6958c97fe0",
+      "name": "Task & Dashboard Manager Agent",
+      "node_id": "task_dashboard_agent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1,
+      "type": "text",
+      "tool_configs": [],
+      "image_output_config": null,
+      "voice_config": null,
+      "file_output": false
+    },
+    {
+      "agent_id": "699c3be7f596b4aad7bce3b3",
+      "name": "Intern Communication Agent",
+      "node_id": "intern_comm_agent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1,
+      "type": "text",
+      "tool_configs": [],
+      "image_output_config": null,
+      "voice_config": null,
+      "file_output": false
+    }
+  ],
+  "workflow_created": true,
+  "total_agents": 2,
+  "created_at": "2026-02-23"
+}
